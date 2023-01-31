@@ -1,7 +1,7 @@
 {
   "applications": {
     "gecko": {
-      "id": "@newtabchange",
+      "id": "@newtabcontainer",
       "strict_min_version": "57.0"
     }
   },
@@ -11,19 +11,19 @@
   "description": "__MSG_extDes__",
   "default_locale": "en",
   "chrome_url_overrides": {
-    "newtab": "res/redirect.htm"
+    "newtab": "ext/redirect.html"
   },
   "icons": {
-    "48": "res/icon.svg",
-    "128": "res/icon.svg"
+    "48": "ext/icon.svg",
+    "128": "ext/icon.svg"
   },
   "background": {
     "scripts": [
-      "res/background.js"
+      "ext/background.js"
     ]
   },
   "options_ui": {
-    "page": "res/options.htm",
+    "page": "ext/options.html",
     "open_in_tab": true,
     "browser_style": false
   },
