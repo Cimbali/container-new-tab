@@ -1,11 +1,17 @@
 {
   "extDes": {
-    "message": "Allows you to change New Tab page to your specific URL"
+    "message": "Allows you to change New Tab page to your specific URL per Container."
   },
   "extName": {
-    "message": "Change New Tab"
+    "message": "Container New Tab"
+  },
+  "extPref": {
+    "message": "Open New Tab preference"
   },
   "extURL": {
     "message": "URL address"
+  },
+  "extPost": {
+    "message": "Reopen this page in a different container to set the new tab for that container."
   }
 }

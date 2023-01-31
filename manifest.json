@@ -1,5 +1,5 @@
 {
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "@newtabcontainer",
       "strict_min_version": "57.0"
@@ -18,9 +18,8 @@
     "128": "ext/icon.svg"
   },
   "background": {
-    "scripts": [
-      "ext/background.js"
-    ]
+    "scripts": ["ext/background.js"],
+    "persistent": false
   },
   "options_ui": {
     "page": "ext/options.html",
@@ -28,6 +27,17 @@
     "browser_style": false
   },
   "permissions": [
+    "cookies",
     "storage"
-  ]
+  ],
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": "ext/icon.svg",
+    "default_title": "__MSG_extPref__"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "description": "__MSG_extPref__"
+    }
+  }
 }

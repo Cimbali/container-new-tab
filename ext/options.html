@@ -1,4 +1,5 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+<!DOCTYPE html><html>
+<head><meta charset="utf-8"><style>
 html,body{
 	height:100%
 }
@@ -19,7 +20,7 @@ section{
 	padding:12px 30px 15px;
 	margin:auto
 }
-h1{
+h1 {
 	font:inherit;
 	padding:0 0 5px 0;
 	margin:0
@@ -37,9 +38,15 @@ input:invalid{
 	border:1px solid #900;
 	background-color:#fdd
 }
-</style>
-</head>
+</style></head>
 <body>
-<script src="options.js"></script>
+	<section>
+		<label><h1 id="prompt"></h1>
+			<input id="url" type="text" placeholder="https://"
+				   pattern="^(([hH]ttps?|HTTPS?|moz-extension)://[^\\s/$.?#].[^\\s]*)|(about:(blank|home))$" />
+		</label>
+		<p id="post"></p>
+	</section>
+	<script src="options.js"></script>
 </body>
 </html>

@@ -1,3 +1,9 @@
-browser.runtime.onInstalled.addListener(event => {
-	event.reason == 'install' && browser.runtime.openOptionsPage();
+browser.runtime.onInstalled.addListener(({ reason }) => {
+	if (reason === 'install') {
+		browser.runtime.openOptionsPage();
+	}
+});
+
+browser.browserAction.onClicked.addListener(() => {
+	browser.runtime.openOptionsPage();
 });
