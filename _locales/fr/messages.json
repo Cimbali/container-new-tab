@@ -1,11 +1,17 @@
 {
   "description": {
-    "message": "Vous pouvez personnaliser Firefox de sorte qu'il affiche la page de votre choix comme la page Nouvel onglet."
+    "message": "Permet de personnaliser Firefox afin d’ouvrir la page de votre choix en nouvel onglet, pour chacun de vos conteneurs."
   },
   "name": {
-    "message": "Nouvel onglet changer"
+    "message": "Container New Tab"
+  },
+  "prefsPage": {
+    "message": "Paramètres de Container New Tab"
   },
   "prefsURL": {
-    "message": "URL du site"
+    "message": "URL à ouvrir"
+  },
+  "prefsNote": {
+    "message": "Pour définir l’URL d’accueil d’un autre conteneur, réouvrir cette page de configuration dans le conteneur désiré"
   }
 }
