@@ -2,12 +2,12 @@
   "applications": {
     "gecko": {
       "id": "@newtabchange",
-      "strict_min_version": "54.0a1"
+      "strict_min_version": "57.0"
     }
   },
   "manifest_version": 2,
   "name": "__MSG_extName__",
-  "version": "1.8",
+  "version": "1.9",
   "description": "__MSG_extDes__",
   "default_locale": "en",
   "chrome_url_overrides": {

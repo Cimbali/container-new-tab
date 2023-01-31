@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 		b.setAttribute('type','text');
 		if(i.t)b.value=i.t;
 		b.setAttribute('placeholder','https://');
-		b.setAttribute('pattern','^(([hH]ttps?|HTTPS?)://[^\\s/$.?#].[^\\s]*)|(about:(blank|home))$');
+		b.setAttribute('pattern','^(([hH]ttps?|HTTPS?|moz-extension)://[^\\s/$.?#].[^\\s]*)|(about:(blank|home))$');
 		b.addEventListener('input',function(e){
 			this.validity.valid&&browser.storage.local.set({t:this.value})
 		});
