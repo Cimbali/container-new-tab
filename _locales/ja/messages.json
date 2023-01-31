@@ -1,11 +1,11 @@
 {
-  "extDes": {
+  "description": {
     "message": "ジとして任意のページを開くように Firefox をカスタマイズすることができます。"
   },
-  "extName": {
+  "name": {
     "message": "新しいタブページのカスタマイズ"
   },
-  "extURL": {
+  "prefsURL": {
     "message": "サイトの URL"
   }
 }

@@ -9,13 +9,13 @@ function getCookieStoreId() {
 }
 
 async function setup() {
-	document.title = getMsg('extName');
+	document.title = getMsg('name');
 	const id = await getCookieStoreId();
 
 	document.getElementById('prompt').textContent = `
-		${getMsg('extURL')} (${id})
+		${getMsg('prefsURL')} (${id})
 	`;
-	document.getElementById('post').textContent = getMsg('extPost');
+	document.getElementById('post').textContent = getMsg('prefsNote');
 
 
 	const entry = document.getElementById('url');

@@ -6,9 +6,9 @@
     }
   },
   "manifest_version": 2,
-  "name": "__MSG_extName__",
+  "name": "__MSG_name__",
   "version": "1.9",
-  "description": "__MSG_extDes__",
+  "description": "__MSG_description__",
   "default_locale": "en",
   "chrome_url_overrides": {
     "newtab": "ext/redirect.html"
@@ -33,11 +33,11 @@
   "browser_action": {
     "browser_style": true,
     "default_icon": "ext/icon.svg",
-    "default_title": "__MSG_extPref__"
+    "default_title": "__MSG_prefsPage__"
   },
   "commands": {
     "_execute_browser_action": {
-      "description": "__MSG_extPref__"
+      "description": "__MSG_prefsPage__"
     }
   }
 }

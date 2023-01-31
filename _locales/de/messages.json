@@ -1,11 +1,11 @@
 {
-  "extDes": {
+  "description": {
     "message": "Sie können festlegen, welche Webseite geöffnet werden soll, wenn Sie einen neuen Tab öffnen."
   },
-  "extName": {
+  "name": {
     "message": "Neue Registerkarte ändern"
   },
-  "extURL": {
+  "prefsURL": {
     "message": "Seiten-URL"
   }
 }

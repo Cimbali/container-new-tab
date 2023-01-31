@@ -1,11 +1,11 @@
 {
-  "extDes": {
+  "description": {
     "message": "如果您不希望浏览器决定您在打开新标签页时看到的网页，可以将其更改为所选的自定义网页。"
   },
-  "extName": {
+  "name": {
     "message": "更改新标签页"
   },
-  "extURL": {
+  "prefsURL": {
     "message": "网站网址"
   }
 }
