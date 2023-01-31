@@ -1,3 +1,5 @@
+'use strict'
+
 const getMsg = e => browser.i18n.getMessage(e);
 
 function getCookieStoreId() {

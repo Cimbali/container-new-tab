@@ -1,3 +1,5 @@
+'use strict'
+
 function getCookieStoreId() {
 	return browser.tabs.getCurrent().then(({ id: tabId }) => {
 		return browser.cookies.getAllCookieStores().then(
