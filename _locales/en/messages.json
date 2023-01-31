@@ -1,0 +1,11 @@
+{
+  "extDes": {
+    "message": "Allows you to change New Tab page to your specific URL"
+  },
+  "extName": {
+    "message": "Change New Tab"
+  },
+  "extURL": {
+    "message": "URL address"
+  }
+}

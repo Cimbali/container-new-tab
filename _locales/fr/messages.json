@@ -1,0 +1,11 @@
+{
+  "extDes": {
+    "message": "Vous pouvez personnaliser Firefox de sorte qu'il affiche la page de votre choix comme la page Nouvel onglet."
+  },
+  "extName": {
+    "message": "Nouvel onglet changer"
+  },
+  "extURL": {
+    "message": "URL du site"
+  }
+}
