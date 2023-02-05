@@ -1,4 +1,7 @@
 {
+  "noContainer": {
+    "message": "No container"
+  },
   "description": {
     "message": "Allows you to change New Tab page to your specific URL per Container."
   },
@@ -9,7 +12,7 @@
     "message": "Container New Tab preferences"
   },
   "prefsURL": {
-    "message": "URL address"
+    "message": "URL addresses"
   },
   "prefsNote": {
     "message": "Reopen this page in a different container to set the new tab for that container."

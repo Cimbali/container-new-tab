@@ -1,4 +1,7 @@
 {
+  "noContainer": {
+    "message": "Aucun conteneur"
+  },
   "description": {
     "message": "Permet de personnaliser Firefox afin d’ouvrir la page de votre choix en nouvel onglet, pour chacun de vos conteneurs."
   },
@@ -9,7 +12,7 @@
     "message": "Paramètres de Container New Tab"
   },
   "prefsURL": {
-    "message": "URL à ouvrir"
+    "message": "URLs à ouvrir"
   },
   "prefsNote": {
     "message": "Pour définir l’URL d’accueil d’un autre conteneur, réouvrir cette page de configuration dans le conteneur désiré"

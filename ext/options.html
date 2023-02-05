@@ -38,14 +38,21 @@ input:invalid{
 	border:1px solid #900;
 	background-color:#fdd
 }
+label img{
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	padding: 0 .2em 0 0;
+}
 </style></head>
 <body>
 	<section>
-		<label><h1 id="prompt"></h1>
-			<input id="url" type="text" placeholder="https://"
-				   pattern="^(([hH]ttps?|HTTPS?|moz-extension)://[^\\s/$.?#].[^\\s]*)|(about:(blank|home))$" />
-		</label>
-		<p id="post"></p>
+		<h1 id="prompt"></h1>
+		<p>
+			<label for="firefox-default"></label>
+			<input name="firefox-default" type="text" placeholder="https://"
+				   pattern="^(([hH]ttps?|HTTPS?|moz-extension)://[^\s/$.?#].[^\s]*)|(about:(blank|home))$" />
+		</p>
 	</section>
 	<script src="options.js"></script>
 </body>

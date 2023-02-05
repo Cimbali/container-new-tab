@@ -27,6 +27,7 @@
     "browser_style": false
   },
   "permissions": [
+    "contextualIdentities",
     "cookies",
     "storage"
   ],

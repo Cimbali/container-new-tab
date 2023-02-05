@@ -9,3 +9,7 @@ browser.runtime.onInstalled.addListener(({ reason }) => {
 browser.browserAction.onClicked.addListener(() => {
 	browser.runtime.openOptionsPage();
 });
+
+browser.contextualIdentities.onRemoved.addListener(({ cookieStoreId: id }) => {
+	browser.storage.local.remove(id);
+});
