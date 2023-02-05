@@ -1,0 +1,56 @@
+name: 'Build signed addon on release or beta'
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
+        # We need tags and (some) history for describe
+        fetch-depth: 0
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Install dependencies
+      run: |
+        npm install --global web-ext
+        echo "`npm config get prefix`/bin" >> $GITHUB_PATH
+
+    - name: Update version number for beta
+      if: github.event_name != 'release'
+      run: |
+        # Add the commits since last release as supplementary number to ensure different versioning
+        jq --rawfile beta_version <(
+          git describe --tags --long | (IFS=- read version commits hash && printf '%s.%d' "${version#v}" "$commits")
+        ) '.version=$beta_version' manifest.json > updated-manifest.json && mv updated-manifest.json manifest.json
+
+    - name: Build extension
+      run: |
+        web-ext build
+
+    - name: Make unsigned release available
+      uses: actions/upload-artifact@v3
+      with:
+        path: web-ext-artifacts/*.zip
+
+    - name: Sign extension with optional uploading
+      run: |
+        [ "${{ github.event_name }}" = "release" ] && chan=listed || chan=unlisted
+        echo "Signing v`jq -r .version manifest.json` for $chan channel"
+
+        web-ext sign --channel $chan ${{ secrets.AMO_API_CREDS }}
+      shell: bash
+
+    - name: Make signed release available
+      uses: actions/upload-artifact@v3
+      if: github.event_name != 'release'
+      with:
+        path: web-ext-artifacts/*.xpi
